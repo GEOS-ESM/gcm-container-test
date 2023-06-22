@@ -19,7 +19,7 @@ RUN git clone -b ${gcmversion} https://github.com/GEOS-ESM/gcm-container-test.gi
     mepo clone && \
     mkdir build && \
     cd build && \
-    cmake .. -DCMAKE_INSTALL_PREFIX=/GEOSgcm/install -DBASEDIR=$BASEDIR/Linux -DUSE_F2PY=OFF -DCMAKE_Fortran_COMPILER=$FC -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX && \
+    cmake .. -DCMAKE_INSTALL_PREFIX=/GEOSgcm/install -DCMAKE_BUILD_TYPE=Debug -DBASEDIR=$BASEDIR/Linux -DUSE_F2PY=OFF -DCMAKE_Fortran_COMPILER=$FC -DCMAKE_C_COMPILER=$CC -DCMAKE_CXX_COMPILER=$CXX && \
     make -j $(nproc) install/strip && \
     cd / && \
     rm -rf /GEOSgcm-src
