@@ -1,4 +1,4 @@
-# GEOSgcm Dockerfile
+# gcm-container-test Dockerfile
 
 ARG osversion
 ARG imagename
@@ -14,7 +14,7 @@ FROM ${BASE_IMAGE}
 
 ARG gcmversion
 
-RUN git clone -b ${gcmversion} https://github.com/GEOS-ESM/GEOSgcm.git /GEOSgcm-src && \
+RUN git clone -b ${gcmversion} https://github.com/GEOS-ESM/gcm-container-test.git /GEOSgcm-src && \
     cd /GEOSgcm-src && \
     mepo clone && \
     mkdir build && \
