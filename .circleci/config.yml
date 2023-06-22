@@ -48,6 +48,7 @@ workflows:
           image_name: geos-env-bcs
           tag_build_arg_name: *tag_build_arg_name
           resource_class: xlarge
+          push_to_dockerhub: false
       #- ci/publish-docker:
           #filters:
             #tags:
@@ -67,3 +68,4 @@ workflows:
           #image_name: geos-env-bcs
           #tag_build_arg_name: *tag_build_arg_name
           #resource_class: xlarge
+          #push_to_dockerhub: false
